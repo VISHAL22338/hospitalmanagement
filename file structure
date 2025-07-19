@@ -1,0 +1,24 @@
+hospital-management/
+│
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── PatientForm.jsx
+│   │   ├── AppointmentTable.jsx
+│   │   └── DoctorSchedule.jsx
+│   │
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── Patients.jsx
+│   │   ├── Doctors.jsx
+│   │   ├── Appointments.jsx
+│   │   ├── Register.jsx
+│   │   └── Login.jsx
+│   │
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── tailwind.config.js
+└── package.json
