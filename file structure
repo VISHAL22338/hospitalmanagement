@@ -1,24 +1,50 @@
-hospital-management/
-│
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── Navbar.jsx
-│   │   ├── Sidebar.jsx
-│   │   ├── PatientForm.jsx
-│   │   ├── AppointmentTable.jsx
-│   │   └── DoctorSchedule.jsx
-│   │
-│   ├── pages/
-│   │   ├── Dashboard.jsx
-│   │   ├── Patients.jsx
-│   │   ├── Doctors.jsx
-│   │   ├── Appointments.jsx
-│   │   ├── Register.jsx
-│   │   └── Login.jsx
-│   │
-│   ├── App.jsx
-│   └── main.jsx
-│
-├── tailwind.config.js
-└── package.json
+├── 📁 backend/
+│   ├── 📁 config/
+│   │   └── db.js                   # MongoDB connection
+│   ├── 📁 controllers/
+│   │   ├── authController.js       # Login/Register logic
+│   │   └── patientController.js    # CRUD for patients
+│   ├── 📁 middlewares/
+│   │   └── authMiddleware.js       # Protect routes
+│   ├── 📁 models/
+│   │   ├── User.js                 # User schema
+│   │   └── Patient.js              # Patient schema
+│   ├── 📁 routes/
+│   │   ├── authRoutes.js
+│   │   └── patientRoutes.js
+│   ├── 📁 utils/
+│   │   └── validators.js           # Input validation utils
+│   ├── .env                        # Environment variables
+│   ├── app.js                      # Express setup
+│   └── server.js                   # Starts the server
+
+├── 📁 frontend/
+│   ├── 📁 public/
+│   │   └── index.html
+│   ├── 📁 src/
+│   │   ├── 📁 assets/              # Images, logos
+│   │   ├── 📁 components/
+│   │   │   ├── Header.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   ├── 📁 context/
+│   │   │   └── AuthContext.jsx     # Auth state provider
+│   │   ├── 📁 pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   └── Patients.jsx
+│   │   ├── 📁 services/
+│   │   │   └── api.js              # Axios instance and API calls
+│   │   ├── 📁 styles/
+│   │   │   └── main.css
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── routes.jsx              # React Router setup
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   └── vite.config.js
+
+├── .gitignore
+├── package.json                    # Root project (can contain scripts to run both FE and BE)
+└── README.md
