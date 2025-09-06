@@ -10,7 +10,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/login", data);
+      const response = await axios.post("http://localhost:3000/api/login", data);
       if (response.status === 200) {
         toast.success("Login successful!");
         navigate("/dashboard");
@@ -51,8 +51,7 @@ const Login = () => {
 
         <button
           type="submit"
-          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
-        >
+          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
           Login
         </button>
 

@@ -10,7 +10,7 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/register", data);
+      const response = await axios.post("http://localhost:3000/api/register", data);
       if (response.status === 201) {
         toast.success("Registered successfully!");
         reset();
